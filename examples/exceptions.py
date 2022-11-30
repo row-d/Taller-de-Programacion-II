@@ -5,8 +5,6 @@ class NotNumberException(Exception):
         return f"Error: value type is not a number, received {type(self.value)}"        
         
 class ZeroDivision(Exception):
-    def __init__(self, *args: object) -> None:
-        super().__init__(*args)
     def __str__(self) -> str:
         return "Division Error: Cannot divide by zero"
 
