@@ -1,6 +1,5 @@
 #include "./graph.hpp"
 
-
 template <typename V, typename E>
 class Graph : public GraphAdjacencyListADT<V, E>
 {
@@ -17,6 +16,8 @@ public:
 
     bool adjacent(struct Node<V> x, struct Node<V> y)
     {
+        // no estoy seguro si funciona
+        // TODO: Investigar listas de adyacencias
         return this._edges[x] == this._edges[y] && this._edges[y] == this._edges[x];
     };
 
@@ -24,11 +25,13 @@ public:
     {
 
         vector<V> neighbors;
-        for (size_t i : this._nodes)
+        vector<V>::iterator it;
+        size_t i = 0;
+        for (it = myvector.begin(); it != myvector.end(); it++, i++)
         {
-            if (this._edges[i] == x)
+            if (*it == x)
             {
-                neighbors.push_back(i);
+                neighbors.push_back(it);
             }
         }
 
@@ -39,10 +42,21 @@ public:
     {
         return this._nodes.push_back(x);
     };
-    void remove_vertex(struct Node<V> x){
+    void remove_vertex(struct Node<V> x)
+    {
+        vector<V>::iterator it;
+        size_t i = 0;
+        for (it = myvector.begin(); it != myvector.end(); it++, i++)
+        {
+            if (*it == x)
+            {
+                this->_nodes.erase(i);
+            }
+        }
+    };
+    struct Node<V> add_edge(struct Node<V> x, struct Node<V> x, E e){
         
     };
-    struct Node<V> add_edge(struct Node<V> x, struct Node<V> x, E e);
     void remove_edge(struct Node<V> x);
     get_edge_value(struct Node<V> x, struct Node<V> y);
     set_edge_value(struct Node<V> x, struct Node<V> y, V value);
