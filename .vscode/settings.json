@@ -1,9 +1,0 @@
-{
-    "files.associations": {
-        "*.ejs": "html",
-        "*.css": "css",
-        "*.html": "html",
-        "*.rmd": "markdown",
-        "vector": "cpp"
-    }
-}
