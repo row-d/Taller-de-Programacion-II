@@ -1,6 +1,6 @@
 #include "index.hpp"
 
-void utils::useRange(std::function<void(int)> f, int pivot1, int pivot2)
+void utils::forRange(int pivot1, int pivot2, std::function<void(int)> f)
 {
     if (pivot1 < pivot2)
     {

@@ -3,6 +3,6 @@
 #include <functional>
 namespace utils
 {
-    void useRange(std::function<void(int)> f, int pivot1, int pivot2);
+    void forRange(int pivot1, int pivot2, std::function<void(int)> f);
 }
 #endif // UTILS_INDEX_HPP
