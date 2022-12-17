@@ -11,7 +11,7 @@ using std::endl;
 int main()
 {
     int n = 3;
-    for (size_t a = 2; a < 201; a++)
+    for (size_t a = 6; a < 201; a++)
     {
         int a3 = a * a * a;
         for (size_t b = 2; b < 201; b++)
