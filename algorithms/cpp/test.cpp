@@ -1,8 +1,9 @@
 #include <iostream>
-#include "dfs-r.cpp"
 
 int main()
 {
-  
+  int rows = 3;
+  int cols = 4;
+
   return 0;
 }
