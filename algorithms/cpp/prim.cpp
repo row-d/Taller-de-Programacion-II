@@ -59,8 +59,6 @@ vector<pair<int, Key>> prim(unordered_map<Key, vector<pair<int, Key>>> grafo, Ke
   return arbol;
 }
 
-
-
 int main()
 {
   unordered_map<char, vector<pair<int, char>>> grafo;
@@ -76,7 +74,7 @@ int main()
    */
 
   // expect prim : 18
-  // expect dijkstra : 18 
+  // expect dijkstra : 18
 
   grafo['A'] = {{1, 'B'}, {2, 'C'}};
   grafo['B'] = {{1, 'A'}, {3, 'C'}};
