@@ -1,12 +1,11 @@
 #include <iostream>
-#include <fstream>
 using namespace std;
-#ifndef ONLINE_JUDGE
-ifstream cin("input.txt");
-ofstream cout("output.txt");
-#endif
 
 int main()
 {
+#ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+#endif
     return 0;
 }

@@ -1,59 +1,34 @@
 #include <iostream>
 #include <fstream>
-#ifndef ONLINE_JUDGE
-std::ifstream cin("input.txt");
-std::ofstream cout("output.txt");
-#endif
+
 #define TRUE "TRUE"
 #define FALSE "FALSE"
 int main()
 {
+#ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+#endif
+    /**
+     * input example:
+     * rbgggrrggbgr
+     * rrrbbbrrbbbr
+     * rbgrbgrrrrrg
+     *
+     * output example:
+     * TRUE
+     * FALSE
+     * FALSE
+     */
+
     std::string cubes;
-    enum Colors
+    while (std::cin >> cubes)
     {
-        r,
-        g,
-        b
-    };
-    enum Cube
-    {
-        A,
-        B,
-        C,
-        D,
-        E,
-        F
-    };
-
-    while (cin >> cubes)
-    {
-        int r1 = 0;
-        int g1 = 0;
-        int b1 = 0;
-
-        int r2 = 0;
-        int g2 = 0;
-        int b2 = 0;
-        for (size_t i = 0; i < 6; i++)
-        {
-            for (size_t i = 0; i < 6; i++)
-            {
-                for (size_t i = 0; i < 6; i++)
-                {
-                }
-            }
-        }
-
-        // cout << r1 << g1 << b1 << std::endl;
-        // cout << r2 << g2 << b2 << std::endl;
-        if (r1 == r2 && g1 == g2 && b1 == b2)
-        {
-            cout << TRUE << std::endl;
-        }
-        else
-        {
-            cout << FALSE << std::endl;
-        }
+        size_t len = cubes.size();
+        size_t half = len / 2;
+        std::string initialCube = cubes.substr(0, half);
+        std::string finalCube = cubes.substr(half, len);
     }
+
     return 0;
 }
