@@ -1,2 +1,4 @@
 #!/bin/bash
-cp -R "./template" "$(date +'%d-%m-%Y')"
+folder=$(date +'%d-%m-%Y')
+cp -R "./template" $folder
+cd $folder

@@ -1,12 +1,15 @@
 #include <iostream>
 using namespace std;
-#ifndef ONLINE_JUDGE
-#define ONLINE_JUDGE \
-    freopen("input.txt", "r", stdin);\
-    freopen("output.txt", "w", stdout);
-#endif
+
+#define NOTEOF($PATTERN, ...) while (scanf($PATTERN, __VA_ARGS__) != EOF)
+#define fori(i, len) for (size_t i = 0; i < len; i++)
+#define forfrom(i, init, len) for (size_t i = init; i < len; i++)
+
 int main()
 {
-    ONLINE_JUDGE
+#ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+#endif
     return 0;
 }
