@@ -16,12 +16,33 @@ using namespace std;
     type var[len];                 \
     FROMTO(i, len)                 \
         cin >> var[i]
-
 int main()
 {
 #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 #endif
+    CASES
+    {
+        // Lectura
+        READ(int, len);
+        READ_ARRAY(int,a,len);
+        READ_ARRAY(int,b,len);
+        // Logica
+        int count = 0;
+        FROMTO(i, len)
+        {
+            FOR(j, i + 1, len)
+            {
+                bool condition = (a[i] * a[j] == b[i] + b[j]);
+                count += condition;
+                if (condition)
+                    cout << "(" << i + 1 << "," << j + 1 << ")\n";
+            }
+        }
+        cout << count << endl;
+        // Logica
+    }
+
     return 0;
 }
