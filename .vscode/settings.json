@@ -48,6 +48,12 @@
     "stdexcept": "cpp",
     "streambuf": "cpp",
     "typeinfo": "cpp",
-    "map": "cpp"
+    "map": "cpp",
+    ".env*": "dotenv",
+    "any": "cpp",
+    "chrono": "cpp",
+    "ratio": "cpp",
+    "scoped_allocator": "cpp",
+    "variant": "cpp"
   }
 }

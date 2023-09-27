@@ -14,7 +14,7 @@ using namespace std;
     cin >> var
 #define READ_ARRAY(type, var, len) \
     type var[len];                 \
-    FROMTO(i, len)                 \
+    FOR_RANGE(i, len)                 \
         cin >> var[i]
 int main()
 {
@@ -30,7 +30,7 @@ int main()
         READ_ARRAY(int,b,len);
         // Logica
         int count = 0;
-        FROMTO(i, len)
+        FOR_RANGE(i, len)
         {
             FOR(j, i + 1, len)
             {
